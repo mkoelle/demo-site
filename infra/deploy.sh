@@ -8,8 +8,8 @@ region='us-east-1'
 export AWS_DEFAULT_REGION=$region
 export AWS_REGION=$region
 
-# export AWS_SECRET_ACCESS_KEY= WHHHYYYYY
-# export AWS_ACCESS_KEY_ID=  NOOOOOOOOOOO
+# export AWS_SECRET_ACCESS_KEY= 
+# export AWS_ACCESS_KEY_ID=  
 
 set -x
 
