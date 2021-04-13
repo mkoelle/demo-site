@@ -8,11 +8,11 @@ region='us-east-1'
 export AWS_DEFAULT_REGION=$region
 export AWS_REGION=$region
 
-projectkey='demo-site-content'
+projectkey='demo-site'
 
 set -x
 
-bucket=$(aws cloudformation list-exports --query "Exports[?Name=='${projectkey}-bucket'].Value" --output text)
+bucket=$(aws cloudformation list-exports --query "Exports[?Name=='${projectkey}-content-bucket'].Value" --output text)
 URL=$(aws cloudformation list-exports --query "Exports[?Name=='${projectkey}-domain'].Value" --output text)
 
 aws s3 sync src s3://${bucket}
