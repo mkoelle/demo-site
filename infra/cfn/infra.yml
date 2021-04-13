@@ -58,3 +58,6 @@ Outputs:
   Domain:
     Description: "Cloudfront Domain"
     Value: !GetAtt CDN.DomainName
+    Export:
+      Name:
+        Fn::Sub: ${AWS::StackName}-domain
