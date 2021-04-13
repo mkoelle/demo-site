@@ -2,7 +2,7 @@ name: Update infra
 on: 
   push:
     paths:
-      - 'infra'
+      - 'infra/**/*'
 jobs:
   deploy:
     name: Update infra
