@@ -15,5 +15,8 @@ set -x
 bucket=$(aws cloudformation list-exports --query "Exports[?Name=='${projectkey}-content-bucket'].Value" --output text)
 URL=$(aws cloudformation list-exports --query "Exports[?Name=='${projectkey}-domain'].Value" --output text)
 
-aws s3 sync src s3://${bucket}
+npm ci
+npm run build
+
+aws s3 sync dist s3://${bucket}
 echo "check it out at $URL"
